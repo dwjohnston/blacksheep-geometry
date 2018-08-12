@@ -3,9 +3,7 @@ import {adjustPosition} from "../util/adjust";
 import {fullClone} from "davids-toolbox"; 
 import { Position } from "../Position";
 import { Color } from "../Color";
-/**
-This one looks like it's likley broken. Remove this message if it's not.
-*/
+
 export class Line extends DrawableObject {
 
 
