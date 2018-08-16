@@ -12,7 +12,7 @@ export class AbstractPolygon{
   constructor(nsides=3, size=1, phase=0, position = new Position(0,0)) {
     this.nSides=nsides;
     this.size = size;
-    this.phase = phase;
+    this.phase = (phase + Math.PI * 2) % (Math.PI *2);
 
     this.position = position;
 
@@ -29,12 +29,11 @@ export class AbstractPolygon{
 
   getPoint(phase : number) : Position {
 
-
+    phase = (phase+ Math.PI*2) % (Math.PI *2 ); 
     let edgeNum = Math.floor(((phase/ (Math.PI *2) ) * this.nSides));
     let edgePhase = (phase%((Math.PI*2)/this.nSides))/((Math.PI*2)/this.nSides);
+
     let position = pointBetween(this.points[(edgeNum+1)%this.nSides], this.points[edgeNum], edgePhase);
-
-
     return position;
   }
 
