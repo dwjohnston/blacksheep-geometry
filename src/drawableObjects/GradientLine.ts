@@ -1,7 +1,7 @@
 import {adjustPosition} from "../util/adjust";
 
 import {DrawableObject} from "./DrawableObject"
-import ColorPoint from "../ColorPoint";
+import {ColorPoint} from "../ColorPoint";
 
 export class GradientLine extends DrawableObject {
 
@@ -18,7 +18,6 @@ export class GradientLine extends DrawableObject {
 		this.cp2= cp2;
 
 		this.size = size;
-
 	}
 
 
@@ -29,9 +28,10 @@ export class GradientLine extends DrawableObject {
 
 		var gradient = context.createLinearGradient(p1.x,p1.y,p2.x,p2.y);
 
-
 		gradient.addColorStop(0, this.cp1.color.toString());
 		gradient.addColorStop(1, this.cp2.color.toString());
+
+
 		context.strokeStyle = gradient;
 		context.lineWidth = this.size;
 

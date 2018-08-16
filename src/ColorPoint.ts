@@ -3,7 +3,7 @@ import { Color } from "./Color";
 
 import {fullClone} from "davids-toolbox"; 
 
-class ColorPoint {
+export class ColorPoint {
 	position: Position; 
 	color: Color; 
 
@@ -13,4 +13,3 @@ class ColorPoint {
 	}
 }
 
- export default ColorPoint;

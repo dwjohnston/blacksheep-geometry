@@ -36,6 +36,8 @@ export class Circle extends DrawableObject {
 
 		this.solid = solid;
 
+
+
 	}
 
 	draw(context: CanvasRenderingContext2D) {

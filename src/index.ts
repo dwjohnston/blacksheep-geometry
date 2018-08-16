@@ -1,6 +1,6 @@
 export * from "./Color"; 
-export * from "./ColorPoint"; 
 export * from "./Position"; 
+export * from "./ColorPoint"; 
 
 export * from "./drawableObjects/ClearAll"; 
 export * from "./drawableObjects/Circle"; 
